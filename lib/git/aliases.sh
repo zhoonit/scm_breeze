@@ -99,8 +99,8 @@ if [ "$git_setup_aliases" = "yes" ]; then
 
   # Commands that deal with paths
   __git_alias "$git_checkout_alias"                 'git' 'checkout'
-  __git_alias "$git_commit_alias"                   'git' 'commit'
-  __git_alias "$git_commit_verbose_alias"           'git' 'commit' '--verbose'
+  __git_alias "$git_commit_alias"                   'git' 'commit' '-s'
+  __git_alias "$git_commit_verbose_alias"           'git' 'commit' '--verbose' '-s'
   __git_alias "$git_reset_alias"                    'git' 'reset'
   __git_alias "$git_reset_hard_alias"               'git' 'reset' '--hard'
   __git_alias "$git_rm_alias"                       'git' 'rm'
@@ -170,7 +170,7 @@ if [ "$git_setup_aliases" = "yes" ]; then
   _alias "$git_commit_no_msg_alias"       'git commit -C HEAD'
   _alias "$git_log_stat_alias"            'git log --stat --max-count=5'
   _alias "$git_log_graph_alias"           'git log --graph --max-count=5'
-  _alias "$git_add_all_alias"             'git add --all .'
+  _alias "$git_add_all_alias"             'git add --all'
 
   # Hub aliases (https://github.com/github/hub)
   _alias "$git_pull_request_alias"        'git pull-request'
